@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+                <a href="#" class="navbar-logo">Romi Yudha<span>Pratama</span>.</a>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portofolio">Portofolio</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+                <i class="ri-close-line" onclick="closemenu()"></i>
+            </ul>
+            <i class="ri-menu-line" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h1>Halo, Nama Saya <span>Romi Yudha Pratama</span><br>Dari Slawi</h1>
+            <p>Saya Adalah Seorang Mahasiswi</p>
+        </div>
+    </div>
+</div> 
+<!-- ---------------about------------- -->
+   <div id="about">
+       <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Img/Romi2.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero vitae voluptatem minus quod at cum, quos nemo exercitationem? Consectetur minus alias dolorum repellat fugit eveniet voluptas id consequatur dolore asperiores.</p>
+
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skill')">Skill</p>
+                        <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skill">
+                        <ul>
+                            <li><span>Sepak Bola</span><br>Penjaga Hati</li>
+                            <li><span>Bola Voli</span><br>Libero</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021 - Current</span><br>SepakBola</li>
+                            <li><span>2020 - Current</span><br>Voli</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020 - 2023</span><br>Voli Belajar Sejak SMA</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+       </div>
+   </div>
+   <!-- --------------services------------- -->
+   <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa fa-code"></i>
+                    <h2>PROGRAMMER</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores minus odio porro sit nesciunt nihil, similique nisi quam rem laudantium atque veritatis ullam, optio ad necessitatibus accusantium sint aliquam ex.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa fa-crop"></i>
+                    <h2>DATA ANALYST</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores minus odio porro sit nesciunt nihil, similique nisi quam rem laudantium atque veritatis ullam, optio ad necessitatibus accusantium sint aliquam ex.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+   </div>
+   <!-- ---------------portofolio----------- -->
+   <div id="portofolio">
+        <div class="container">
+            <h1 class="sub-title">My Hobby</h1>
+            <div class="work-list">
+                <div class="hobby">
+                    <img src="Img/ML.jpeg">
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+   </div>
+   <!-- ------------------kontak----------------- -->
+   <div id="kontak">
+    <div class="container">
+        <div class="row">
+            <div class="kontak-left">
+                <h1 class="sub-title">Kontak Saya</h1>
+                <p><i class="ri-send-plane-fill"></i>romiyudhap@gmail.com</p>
+                <p><i class="ri-phone-fill"></i>081882895462</p>
+                <div class="sosial-icons">
+                    <a href="https://www.instagram.com/rydp___/?next=%2F"><i class="ri-instagram-line"></i></a>
+                </div>
+                <a href="Img/Cv Saya.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="kontak-right">
+                <form>
+                    <input type="text" name="Nama" placeholder="Nama" required>
+                    <input type="text" name="Email" placeholder="Email" required>
+                    <textarea name="Pesan" rows="6" placeholder="Pesan"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © romiyudhap. Production All rights reserved </p>
+    </div>
+   </div>
+
+   <script>
+
+       var tablinks =document.getElementsByClassName("tab-links");
+       var tabcontents = document.getElementsByClassName("tab-contents");
+
+       function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+       }
+
+   </script>
+
+   <script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+   </script>
+</body>
+</html>
